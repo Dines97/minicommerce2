@@ -14,6 +14,6 @@ public class OpenApiConfig {
                 .info(new Info()
                         .title("minicommerceAPI")
                         .version("1.0")
-                        .description("Mini e-commerce REST API. Documentation is available under /api-docs and /api-docs-json."));
+                        .description("Mini e-commerce REST API. Documentation is available under /v3/api-docs."));
     }
 }

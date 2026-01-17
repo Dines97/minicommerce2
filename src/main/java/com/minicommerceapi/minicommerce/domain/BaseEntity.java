@@ -21,4 +21,8 @@ public abstract class BaseEntity {
     public Instant getCreatedAt() {
         return createdAt;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

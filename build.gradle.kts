@@ -1,7 +1,12 @@
 plugins {
 	java
+	jacoco
 	id("org.springframework.boot") version "4.0.1"
 	id("io.spring.dependency-management") version "1.1.7"
+}
+
+jacoco {
+	toolVersion = "0.8.14"
 }
 
 group = "com.minicommerceapi"
@@ -32,6 +37,13 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-webmvc-test")
 	testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+tasks.jacocoTestReport {
+	reports {
+		xml.required.set(true)
+		html.required.set(true)
+	}
 }
 
 tasks.withType<Test> {

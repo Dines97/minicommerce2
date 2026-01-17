@@ -109,6 +109,24 @@ curl -s -X PATCH http://localhost:8080/api/reviews/1 -H "Content-Type: applicati
 
 - JaCoCo report: `target/site/jacoco/index.html`
 
+## Testing
+
+This project includes comprehensive test coverage:
+
+- **Unit Tests**: Service layer tests with Mockito
+- **Integration Tests**: Full API endpoint tests with MockMvc
+- **E2E Tests**: End-to-end workflow tests (5 scenarios, 9 test methods)
+
+### E2E Test Scenarios
+
+1. **User Registration → Order Placement**: Complete shopping workflow
+2. **Product Lifecycle**: CRUD operations and inventory management
+3. **Review Workflow**: Purchase, review, update, delete
+4. **Catalog Management**: Multi-category organization
+5. **Multi-User Shopping**: Concurrent users, orders, and reviews
+
+See [E2E_TEST_DOCUMENTATION.md](E2E_TEST_DOCUMENTATION.md) for detailed information.
+
 ## Notes
 
 - Tum endpoint'ler Swagger UI uzerinden goruntulenebilir ve request/response semalari OpenAPI 3 ile dokumante edilir.
